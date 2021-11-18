@@ -6,11 +6,11 @@
  */
 
 import * as React from "react"
-import { ILayout } from "../common/interfaces"
+import { ILayoutProps } from "../common/interfaces"
 import Navbar from "./Navbar"
 import Footer from "./Footer"
 
-export default function Layout({ children }: ILayout) {
+export default function Layout({ children }: ILayoutProps) {
   return (
     <>
       <Navbar />

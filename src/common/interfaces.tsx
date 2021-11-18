@@ -1,5 +1,9 @@
 import { ReactNode } from "react"
 
-export interface ILayout {
+export interface ILayoutProps {
+  children: ReactNode
+}
+
+export interface INavbarItemProps {
   children: ReactNode
 }
