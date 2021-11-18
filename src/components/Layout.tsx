@@ -10,7 +10,7 @@ import { ILayout } from "../common/interfaces"
 import Navbar from "./Navbar"
 import Footer from "./Footer"
 
-const Layout = ({ children }: ILayout) => {
+export default function Layout({ children }: ILayout) {
   return (
     <>
       <Navbar />
@@ -19,5 +19,3 @@ const Layout = ({ children }: ILayout) => {
     </>
   )
 }
-
-export default Layout
