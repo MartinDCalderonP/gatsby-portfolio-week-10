@@ -14,7 +14,7 @@ export default function Layout({ children }: ILayout) {
   return (
     <>
       <Navbar />
-      <main>{children}</main>
+      <main className="container mx-auto h-4/5">{children}</main>
       <Footer />
     </>
   )
