@@ -30,15 +30,15 @@ export default function projects({ data }: any) {
 
 export const query = graphql`
   query {
-    allMarkdownRemark {
+    allMarkdownRemark(sort: { fields: frontmatter___week, order: DESC }) {
       edges {
         node {
           frontmatter {
             slug
             title
-            week
             stack
-            cardImage
+            image
+            description
           }
         }
       }
