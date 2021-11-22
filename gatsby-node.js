@@ -1,9 +1,24 @@
-exports.createPages = async ({ actions }) => {
-  const { createPage } = actions
-  createPage({
-    path: "/using-dsg",
-    component: require.resolve("./src/templates/using-dsg.tsx"),
-    context: {},
-    defer: true,
+exports.createPages = async function ({ actions, graphql }) {
+  const { data } = await graphql(`
+    query {
+      allMarkdownRemark {
+        edges {
+          node {
+            frontmatter {
+              slug
+            }
+          }
+        }
+      }
+    }
+  `)
+  data.allMarkdownRemark.edges.forEach(edge => {
+    const slug = edge.node.frontmatter.slug
+
+    actions.createPage({
+      path: slug,
+      component: require.resolve(`./src/templates/project.tsx`),
+      context: { slug: slug },
+    })
   })
 }
