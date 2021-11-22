@@ -6,5 +6,5 @@ description: A Videogames Store app in ReactJS using Hooks.
 stack: HTML, CSS, SASS, JavaScript, React, Hooks
 repoUrl: https://gitlab.com/MartinDCalderonP/videogames-store-week-05
 deployUrl: https://videogames-store-week-5.vercel.app/
-images: []
+image: ../images/videogames-store-week-05.png
 ---
