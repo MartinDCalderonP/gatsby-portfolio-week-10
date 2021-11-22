@@ -14,3 +14,7 @@ export interface ICardProps {
   title: string
   image: string
 }
+
+export interface IChipsListProps {
+  selectedTag?: Function
+}
