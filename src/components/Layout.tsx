@@ -10,12 +10,12 @@ import { ILayoutProps } from "../common/interfaces"
 import Navbar from "./Navbar"
 import Footer from "./Footer"
 
-export default function Layout({ children }: ILayoutProps) {
+export default function Layout({ children, footer }: ILayoutProps) {
   return (
     <>
       <Navbar />
       <main className="container mx-auto h-4/5">{children}</main>
-      <Footer />
+      {footer !== false && <Footer />}
     </>
   )
 }
