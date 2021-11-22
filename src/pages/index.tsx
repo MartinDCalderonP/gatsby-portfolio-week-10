@@ -12,10 +12,10 @@ export default function IndexPage() {
         <StaticImage
           className="rounded-lg w-2/4"
           src="../images/photo.jpg"
+          alt="Martín Calderón"
           width={300}
           quality={95}
           formats={["auto", "webp", "avif"]}
-          alt="Martín Calderón"
         />
 
         <div className="px-10 py-4">
