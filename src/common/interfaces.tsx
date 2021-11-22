@@ -8,3 +8,8 @@ export interface ILayoutProps {
 export interface INavbarItemProps {
   children: ReactNode
 }
+
+export interface ICardProps {
+  title: string
+  image: string
+}
