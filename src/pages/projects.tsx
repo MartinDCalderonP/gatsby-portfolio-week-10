@@ -12,14 +12,12 @@ export default function projects({ data }: any) {
         <h1 className="text-4xl text-white p-2">Projects</h1>
 
         <div className="flex flex-wrap justify-center">
-          {posts.map(({ node }: any) => (
+          {posts.map(({ node }: any, index: number) => (
             <Card
-              key={node.id}
-              title={node.frontmatter.title}
-              image={node.frontmatter.image}
-              description={node.frontmatter.description}
-              stack={node.frontmatter.stack}
+              key={`project${index}`}
               slug={node.frontmatter.slug}
+              image={node.frontmatter.image.publicURL}
+              title={node.frontmatter.title}
             />
           ))}
         </div>
@@ -36,9 +34,9 @@ export const query = graphql`
           frontmatter {
             slug
             title
-            stack
-            image
-            description
+            image {
+              publicURL
+            }
           }
         }
       }

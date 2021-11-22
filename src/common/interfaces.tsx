@@ -10,9 +10,7 @@ export interface INavbarItemProps {
 }
 
 export interface ICardProps {
+  slug: string
   title: string
   image: string
-  description: string
-  stack: string
-  slug: string
 }
