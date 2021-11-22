@@ -18,7 +18,7 @@ export default function contact() {
           Are you searching for a developer? Here are my social networks:
         </p>
 
-        <div className="flex text-2xl p-2">
+        <div className="flex items-center justify-center text-2xl p-2">
           <a
             className="mx-2"
             href="https://www.linkedin.com/in/mart%C3%ADn-calder%C3%B3n/"
