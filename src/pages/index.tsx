@@ -19,24 +19,22 @@ export default function IndexPage() {
         />
 
         <div className="px-10 py-4">
-          <h1 className="text-4xl text-white p-2">Martín Calderón</h1>
-          <h2 className="text-2xl text-white p-2 underline">
-            Frontend Developer
-          </h2>
-          <p className="text-white p-2">
+          <h1 className="text-4xl p-2">Martín Calderón</h1>
+          <h2 className="text-2xl p-2 underline">Frontend Developer</h2>
+          <p className="p-2">
             Hi! My name is Martín and I'm a Frontend Developer from Buenos
             Aires, Argentina. I'm passionate about building web applications and
             I love to learn new technologies.
           </p>
 
-          <h2 className="text-2xl text-white p-2 underline">Education</h2>
-          <p className="text-white p-2">
+          <h2 className="text-2xl p-2 underline">Education</h2>
+          <p className="p-2">
             I was studying Social Communication for three years and switch to
             System Analysis in the Universidad de Buenos Aires.
           </p>
 
-          <h2 className="text-2xl text-white p-2 underline">Experience</h2>
-          <p className="text-white p-2">
+          <h2 className="text-2xl p-2 underline">Experience</h2>
+          <p className="p-2">
             Actually, I'm in the Trainee Program of{" "}
             <a href="https://applaudostudios.com/">Applaudo Studios</a> and have
             experience in other areas like construction.
