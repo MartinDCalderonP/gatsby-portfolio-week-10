@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { IChipsListProps } from "../common/interfaces"
 
 const Tags = [
@@ -16,7 +16,10 @@ const Tags = [
 ]
 
 export default function ChipsList({ selectedTag }: IChipsListProps) {
+  const [selectedChip, setSelectedChip] = useState("")
+
   const handleChipClick = (tag: string) => {
+    setSelectedChip(tag)
     if (selectedTag) {
       selectedTag(tag)
     }
@@ -27,8 +30,11 @@ export default function ChipsList({ selectedTag }: IChipsListProps) {
       <div className="flex items-center justify-between w-11/12 overflow-y-hidden">
         {Tags.map((tag, index) => (
           <div
-            key={index}
-            className="flex items-center justify-center mr-2 p-2 rounded-full bg-gray-200 text-gray-700 text-sm cursor-pointer"
+            key={`chip${index}`}
+            className={
+              `flex items-center justify-center mr-2 p-2 rounded-full bg-gray-200 text-gray-700 text-sm cursor-pointer` +
+              (selectedChip === tag ? ` bg-gray-400 text-gray-900` : "")
+            }
             onClick={() => handleChipClick(tag)}
           >
             {tag}
