@@ -7,4 +7,5 @@ stack: HTML, CSS, JavaScript
 repoUrl: https://gitlab.com/MartinDCalderonP/form-week-01
 deployUrl: https://form-week-01.vercel.app/
 image: ../images/form1-week-01.png
+detailImage: ../images/form2-week-01.png
 ---

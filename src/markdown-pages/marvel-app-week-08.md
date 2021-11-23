@@ -6,5 +6,6 @@ description: A Marvel App with API using global state. It consumes the Marvel AP
 stack: HTML, CSS, SASS, JavaScript, React, Hooks, TypeScript, ContextAPI
 repoUrl: https://gitlab.com/MartinDCalderonP/marvel-app-week-08
 deployUrl: https://marvel-app-week-08.vercel.app/
-image: ../images/marvel-app-week-08.png
+image: ../images/marvel-app1-week-08.png
+detailImage: ../images/marvel-app2-week-08.png
 ---

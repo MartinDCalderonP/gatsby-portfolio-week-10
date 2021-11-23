@@ -6,5 +6,6 @@ description: This is this portfolio made in Gatsby. It is a static site, but it 
 stack: HTML, CSS, JavaScript, React, TypeScript, Gatsby, TailwindCSS
 repoUrl: https://gitlab.com/MartinDCalderonP/gatsby-portfolio-week-10
 deployUrl: https://gatsby-portfolio-week-10.vercel.app/
-image: ../images/gatsby-portfolio-week-10.png
+image: ../images/gatsby-portfolio1-week-10.png
+detailImage: ../images/gatsby-portfolio2-week-10.png
 ---

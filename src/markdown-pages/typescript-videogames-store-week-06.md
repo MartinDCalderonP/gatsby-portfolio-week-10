@@ -6,5 +6,6 @@ description: A Videogames Store app in ReactJS with TypeScript. We need to use T
 stack: HTML, CSS, SASS, JavaScript, React, Hooks, TypeScript
 repoUrl: https://gitlab.com/MartinDCalderonP/typescript-videogames-store-week-06
 deployUrl: https://typescript-videogames-store-week-06.vercel.app/
-image: ../images/typescript-videogames-store-week-06.png
+image: ../images/typescript-videogames-store1-week-06.png
+detailImage: ../images/typescript-videogames-store2-week-06.png
 ---

@@ -6,5 +6,6 @@ description: A Weather App with an API. It consumes and displays the weather of 
 stack: HTML, CSS, JavaScript
 repoUrl: https://gitlab.com/MartinDCalderonP/weather-app-week-02
 deployUrl: https://weather-app-week-2.vercel.app/
-image: ../images/weather-app-week-02.jpeg
+image: ../images/weather1-app-week-02.jpeg
+detailImage: ../images/weather2-app-week-02.jpeg
 ---

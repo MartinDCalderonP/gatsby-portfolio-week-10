@@ -6,5 +6,6 @@ description: A Videogames Store app in ReactJS. The first project in React for t
 stack: HTML, CSS, SASS, JavaScript, React
 repoUrl: https://gitlab.com/MartinDCalderonP/videogames-store-week-04
 deployUrl: https://videogames-store-week-4.vercel.app/
-image: ../images/videogames-store-week-04.png
+image: ../images/videogames-store1-week-04.png
+detailImage: ../images/videogames-store2-week-04.png
 ---

@@ -6,5 +6,6 @@ description: An App for manage Posts from an API. It consumes a JSON file with t
 stack: HTML, CSS, JavaScript
 repoUrl: https://gitlab.com/MartinDCalderonP/posts-list-week-03
 deployUrl: https://posts-list-week-3.vercel.app/
-image: ../images/posts-list-week-03.png
+image: ../images/posts-list1-week-03.png
+detailImage: ../images/posts-list2-week-03.png
 ---

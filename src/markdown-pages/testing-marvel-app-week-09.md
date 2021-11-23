@@ -6,5 +6,6 @@ description: Testing the Marvel App with Jest and React Testing Library. I decid
 stack: HTML, CSS, SASS, JavaScript, React, Hooks, TypeScript, ContextAPI, Jest
 repoUrl: https://gitlab.com/MartinDCalderonP/testing-marvel-app-week-09
 deployUrl: https://testing-marvel-app-week-09.vercel.app/
-image: ../images/testing-marvel-app-week-09.png
+image: ../images/testing-marvel-app1-week-09.png
+detailImage: ../images/testing-marvel-app2-week-09.png
 ---
