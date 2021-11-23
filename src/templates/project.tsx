@@ -17,6 +17,11 @@ export default function project({ data }: any) {
           src={post.frontmatter.image.publicURL}
           alt={post.frontmatter.title}
         />
+        <img
+          className="w-full p-2 h-2/3"
+          src={post.frontmatter.detailImage.publicURL}
+          alt={post.frontmatter.title}
+        />
         <h2 className="text-2xl p-2">{post.frontmatter.week}</h2>
         <p className="p-2">{post.frontmatter.description}</p>
         <p className="p-2">Made with: {post.frontmatter.stack}</p>
@@ -40,6 +45,9 @@ export const query = graphql`
       frontmatter {
         title
         image {
+          publicURL
+        }
+        detailImage {
           publicURL
         }
         week
