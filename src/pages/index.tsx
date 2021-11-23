@@ -8,7 +8,7 @@ export default function IndexPage() {
   return (
     <Layout>
       <Seo title="Home" />
-      <div className="flex mx-auto my-4 w-4/5 h-3/4 rounded-lg border border-black shadow-2xl bg-green-700">
+      <div className="flex flex-col lg:flex-row items-center lg:items-stretch justify-center mx-auto my-4 w-4/5 h-3/4 rounded-lg border border-black shadow-2xl bg-green-700">
         <StaticImage
           className="rounded-lg w-2/4"
           src="../images/photo.jpg"
