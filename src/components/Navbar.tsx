@@ -4,7 +4,7 @@ import NavbarItem from "./NavbarItem"
 
 export default function Navbar() {
   return (
-    <nav className="flex items-center justify-evenly bg-red-500 p-4 shadow-lg">
+    <nav className="flex items-center justify-evenly bg-red-500 p-4 shadow-lg sticky">
       <Link to="/">
         <NavbarItem>Home</NavbarItem>
       </Link>
