@@ -14,7 +14,7 @@ export default function Layout({ children, footer }: ILayoutProps) {
   return (
     <>
       <Navbar />
-      <main className="container mx-auto h-4/5">{children}</main>
+      <main className="container mx-auto h-full">{children}</main>
       {footer !== false && <Footer />}
     </>
   )
