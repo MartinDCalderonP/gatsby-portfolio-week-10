@@ -10,7 +10,7 @@ export default function project({ data }: any) {
 
   return (
     <Layout footer={false}>
-      <div className="flex flex-col justify-center items-center mx-auto my-4 w-4/5 h-3/4 rounded-lg border border-black shadow-2xl bg-green-700">
+      <div className="flex flex-col justify-center items-center mx-auto my-4 w-11/12 lg:w-4/5 h-3/4 rounded-lg border border-black shadow-2xl bg-green-700">
         <h1 className="text-4xl p-2">{post.frontmatter.title}</h1>
         <img
           className="w-full p-2 h-2/3"
