@@ -39,6 +39,13 @@ export default function IndexPage() {
             <a href="https://applaudostudios.com/">Applaudo Studios</a> and I
             have work experience in other areas like construction.
           </p>
+
+          <p className="text-sm p-2 text-gray-400">
+            <i>
+              <b>Disclaimer</b>: This portfolio was made for the program. This
+              means that only the projects of that program are in it and I will
+              not keep updating it.
+            </i>
           </p>
         </div>
       </div>
