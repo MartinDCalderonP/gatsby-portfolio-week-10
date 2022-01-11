@@ -35,9 +35,10 @@ export default function IndexPage() {
 
           <h2 className="text-2xl p-2 underline">Experience</h2>
           <p className="p-2">
-            Actually, I'm in the Trainee Program of{" "}
-            <a href="https://applaudostudios.com/">Applaudo Studios</a> and have
-            experience in other areas like construction.
+            Actually, I'm in the React Trainee Program of{" "}
+            <a href="https://applaudostudios.com/">Applaudo Studios</a> and I
+            have work experience in other areas like construction.
+          </p>
           </p>
         </div>
       </div>
