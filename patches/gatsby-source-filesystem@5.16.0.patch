@@ -1,0 +1,38 @@
+diff --git a/create-file-node-from-buffer.js b/create-file-node-from-buffer.js
+index 57b1e4439c37f7208d0753f987f6baf28554dd40..0de81d1d58cfe5ae4ee68e61f0be8b88a2c47785 100644
+--- a/create-file-node-from-buffer.js
++++ b/create-file-node-from-buffer.js
+@@ -2,7 +2,6 @@
+ 
+ const fs = require(`fs-extra`);
+ const path = require(`path`);
+-const fileType = require(`file-type`);
+ const {
+   createFileNode
+ } = require(`./create-file-node`);
+@@ -11,6 +10,16 @@ const {
+   createFilePath
+ } = require(`gatsby-core-utils`);
+ const cacheId = hash => `create-file-node-from-buffer-${hash}`;
++let cachedFileTypeFromBuffer;
++
++const detectFileTypeFromBuffer = async buffer => {
++  if (!cachedFileTypeFromBuffer) {
++    const fileTypeModule = await import(`file-type`);
++    const fallbackFromBuffer = fileTypeModule.default && fileTypeModule.default.fromBuffer ? fileTypeModule.default.fromBuffer.bind(fileTypeModule.default) : null;
++    cachedFileTypeFromBuffer = fileTypeModule.fileTypeFromBuffer || fallbackFromBuffer;
++  }
++  return cachedFileTypeFromBuffer ? cachedFileTypeFromBuffer(buffer) : null;
++};
+ 
+ /********************
+  * Type Definitions *
+@@ -74,7 +83,7 @@ async function processBufferNode({
+     // If the user did not provide an extension and we couldn't get
+     // one from remote file, try and guess one
+     if (typeof ext === `undefined`) {
+-      const filetype = await fileType.fromBuffer(buffer);
++      const filetype = await detectFileTypeFromBuffer(buffer);
+       ext = filetype ? `.${filetype.ext}` : `.bin`;
+     }
+     filename = createFilePath(path.join(pluginCacheDir, hash), name, ext);

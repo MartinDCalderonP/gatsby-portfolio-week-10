@@ -1,0 +1,60 @@
+diff --git a/CHANGELOG.md b/CHANGELOG.md
+deleted file mode 100644
+index 89c7f72b97b050d3e1b7db28e966ee80617a2162..0000000000000000000000000000000000000000
+diff --git a/dist/fetch-remote-file.js b/dist/fetch-remote-file.js
+index 2653211d2474e1043df96a728652c0bcc2fc6cfe..e016e4f66d536f4629c73cf2199620f2f24dc719 100644
+--- a/dist/fetch-remote-file.js
++++ b/dist/fetch-remote-file.js
+@@ -3,7 +3,6 @@
+ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+ exports.__esModule = true;
+ exports.fetchRemoteFile = fetchRemoteFile;
+-var _fileType = _interopRequireDefault(require("file-type"));
+ var _path = _interopRequireDefault(require("path"));
+ var _fsExtra = _interopRequireDefault(require("fs-extra"));
+ var _fastq = _interopRequireDefault(require("fastq"));
+@@ -15,6 +14,16 @@ var _getStorage = require("./utils/get-storage");
+ var _mutex = require("./mutex");
+ const GATSBY_CONCURRENT_DOWNLOAD = process.env.GATSBY_CONCURRENT_DOWNLOAD ? parseInt(process.env.GATSBY_CONCURRENT_DOWNLOAD, 10) || 0 : 50;
+ const alreadyCopiedFiles = new Set();
++let cachedFileTypeFromFile;
++
++async function detectFileTypeFromFile(filename) {
++  if (!cachedFileTypeFromFile) {
++    const fileTypeModule = await import("file-type");
++    const fallbackFromFile = fileTypeModule.default && fileTypeModule.default.fromFile ? fileTypeModule.default.fromFile.bind(fileTypeModule.default) : null;
++    cachedFileTypeFromFile = fileTypeModule.fileTypeFromFile || fallbackFromFile;
++  }
++  return cachedFileTypeFromFile ? cachedFileTypeFromFile(filename) : null;
++}
+ /**
+  * Downloads a remote file to disk
+  */
+@@ -172,7 +181,7 @@ async function fetchFile({
+       // If the user did not provide an extension and we couldn't get one from remote file, try and guess one
+       if (!ext) {
+         // if this is fresh response - try to guess extension and cache result for future
+-        const filetype = await _fileType.default.fromFile(tmpFilename);
++        const filetype = await detectFileTypeFromFile(tmpFilename);
+         if (filetype) {
+           ext = `.${filetype.ext}`;
+           filename += ext;
+diff --git a/dist/fetch-remote-file.mjs b/dist/fetch-remote-file.mjs
+index 06ac6930ecda4e82402f69d329162bf341f6aca4..38534fca09e1c0c565047d6ca9dbb6fa60fefffa 100644
+--- a/dist/fetch-remote-file.mjs
++++ b/dist/fetch-remote-file.mjs
+@@ -1,4 +1,4 @@
+-import fileType from "file-type";
++import fileType, { fileTypeFromFile } from "file-type";
+ import path from "path";
+ import fs from "fs-extra";
+ import Queue from "fastq";
+@@ -167,7 +167,7 @@ async function fetchFile({
+       // If the user did not provide an extension and we couldn't get one from remote file, try and guess one
+       if (!ext) {
+         // if this is fresh response - try to guess extension and cache result for future
+-        const filetype = await fileType.fromFile(tmpFilename);
++        const filetype = fileTypeFromFile ? await fileTypeFromFile(tmpFilename) : await fileType.fromFile(tmpFilename);
+         if (filetype) {
+           ext = `.${filetype.ext}`;
+           filename += ext;
