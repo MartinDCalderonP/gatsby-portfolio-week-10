@@ -7,7 +7,6 @@ settings:
 overrides:
   cookie@<0.7.0: '>=0.7.0'
   file-type@>=13.0.0 <21.3.1: '>=21.3.1'
-  file-type@>=20.0.0 <=21.3.1: '>=21.3.2'
   immutable@<3.8.3: '>=3.8.3'
   serialize-javascript@<=7.0.2: '>=7.0.3'
   tmp@<=0.2.3: '>=0.2.4'
@@ -2273,10 +2272,6 @@ packages:
     resolution: {integrity: sha512-yki5XnKuf750l50uGTllt6kKILY4nQ1eNIQatoXEByZ5dWgnKqbnqmTrBE5B4N7lrMJKQ2ytWMiTO2o0v6Ew/w==}
     engines: {node: '>= 0.6'}
 
-  cookie@1.1.1:
-    resolution: {integrity: sha512-ei8Aos7ja0weRpFzJnEA9UHJ/7XQmqglbRwnf2ATjcB9Wq874VKH9kfjjirM6UhU2/E5fFYadylyhFldcqSidQ==}
-    engines: {node: '>=18'}
-
   core-js-compat@3.31.0:
     resolution: {integrity: sha512-hM7YCu1cU6Opx7MXNu0NuumM0ezNeAeRKadixyiQELWY3vT3De9S4J5ZBMraWV2vZnrE1Cirl0GtFtDtMUXzPw==}
 
@@ -2999,10 +2994,6 @@ packages:
     engines: {node: '>= 10.13.0'}
     peerDependencies:
       webpack: '>=5.104.1'
-
-  file-type@21.3.1:
-    resolution: {integrity: sha512-SrzXX46I/zsRDjTb82eucsGg0ODq2NpGDp4HcsFKApPy8P8vACjpJRDoGGMfEzhFC0ry61ajd7f72J3603anBA==}
-    engines: {node: '>=20'}
 
   file-type@21.3.3:
     resolution: {integrity: sha512-pNwbwz8c3aZ+GvbJnIsCnDjKvgCZLHxkFWLEFxU3RMa+Ey++ZSEfisvsWQMcdys6PpxQjWUOIDi1fifXsW3YRg==}
@@ -9022,8 +9013,6 @@ snapshots:
 
   cookie@0.7.2: {}
 
-  cookie@1.1.1: {}
-
   core-js-compat@3.31.0:
     dependencies:
       browserslist: 4.28.1
@@ -9974,15 +9963,6 @@ snapshots:
       schema-utils: 3.3.0
       webpack: 5.105.4
 
-  file-type@21.3.1:
-    dependencies:
-      '@tokenizer/inflate': 0.4.1
-      strtok3: 10.3.4
-      token-types: 6.1.2
-      uint8array-extras: 1.5.0
-    transitivePeerDependencies:
-      - supports-color
-
   file-type@21.3.3:
     dependencies:
       '@tokenizer/inflate': 0.4.1
@@ -10451,7 +10431,7 @@ snapshots:
     dependencies:
       '@babel/runtime': 7.28.6
       chokidar: 3.6.0
-      file-type: 21.3.1
+      file-type: 21.3.3
       fs-extra: 11.3.4
       gatsby: 5.16.1(babel-eslint@10.1.0(eslint@7.32.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@0.21.3)(typescript@4.9.5)
       gatsby-core-utils: 4.16.0
@@ -10570,7 +10550,7 @@ snapshots:
       chokidar: 3.6.0
       common-tags: 1.8.2
       compression: 1.8.1
-      cookie: 1.1.1
+      cookie: 0.7.2
       core-js: 3.48.0
       cors: 2.8.6
       css-loader: 5.2.7(webpack@5.105.4)
