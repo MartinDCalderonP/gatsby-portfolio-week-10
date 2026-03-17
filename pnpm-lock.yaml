@@ -7,6 +7,7 @@ settings:
 overrides:
   cookie@<0.7.0: '>=0.7.0'
   file-type@>=13.0.0 <21.3.1: '>=21.3.1'
+  file-type@>=20.0.0 <=21.3.1: '>=21.3.2'
   immutable@<3.8.3: '>=3.8.3'
   serialize-javascript@<=7.0.2: '>=7.0.3'
   tmp@<=0.2.3: '>=0.2.4'
@@ -3001,6 +3002,10 @@ packages:
 
   file-type@21.3.1:
     resolution: {integrity: sha512-SrzXX46I/zsRDjTb82eucsGg0ODq2NpGDp4HcsFKApPy8P8vACjpJRDoGGMfEzhFC0ry61ajd7f72J3603anBA==}
+    engines: {node: '>=20'}
+
+  file-type@21.3.3:
+    resolution: {integrity: sha512-pNwbwz8c3aZ+GvbJnIsCnDjKvgCZLHxkFWLEFxU3RMa+Ey++ZSEfisvsWQMcdys6PpxQjWUOIDi1fifXsW3YRg==}
     engines: {node: '>=20'}
 
   filename-reserved-regex@2.0.0:
@@ -9978,6 +9983,15 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  file-type@21.3.3:
+    dependencies:
+      '@tokenizer/inflate': 0.4.1
+      strtok3: 10.3.4
+      token-types: 6.1.2
+      uint8array-extras: 1.5.0
+    transitivePeerDependencies:
+      - supports-color
+
   filename-reserved-regex@2.0.0: {}
 
   filenamify@4.3.0:
@@ -10183,7 +10197,7 @@ snapshots:
       ci-info: 2.0.0
       configstore: 5.0.1
       fastq: 1.20.1
-      file-type: 21.3.1
+      file-type: 21.3.3
       fs-extra: 11.3.4
       got: 11.8.6
       hash-wasm: 4.12.0
