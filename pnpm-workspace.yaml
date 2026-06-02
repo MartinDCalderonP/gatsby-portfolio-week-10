@@ -1,16 +1,16 @@
-overrides:
-  '@parcel/reporter-dev-server@>=1.6.1 <=2.16.3': '>=2.16.4'
-  cookie@<0.7.0: '>=0.7.0'
-  file-type@>=13.0.0 <21.3.1: '>=21.3.1'
-  immutable@<3.8.3: '>=3.8.3'
-  lodash@<=4.17.23: '>=4.18.0'
-  lodash@>=4.0.0 <=4.17.23: '>=4.18.0'
-  path-to-regexp@<0.1.13: '>=0.1.13'
-  qs@>=6.11.1 <=6.15.1: '>=6.15.2'
-  serialize-javascript@<=7.0.2: '>=7.0.3'
-  serialize-javascript@>=5.0.0 <7.0.5: '>=7.0.5'
-  tmp@<=0.2.3: '>=0.2.4'
-  uuid@<11.1.1: '>=11.1.1'
-  webpack@>=5.49.0 <5.104.0: '>=5.104.0'
-  webpack@>=5.49.0 <=5.104.0: '>=5.104.1'
-  ws@>=8.0.0 <8.20.1: '>=8.20.1'
+minimumReleaseAgeExclude:
+  - cookie@0.7.0
+  - tmp@0.2.4
+  - webpack@5.104.1
+  - webpack@5.104.0
+  - serialize-javascript@7.0.3
+  - file-type@21.3.1
+  - path-to-regexp@0.1.13
+  - lodash@4.17.24
+  - '@parcel/reporter-dev-server@2.16.4'
+  - immutable@3.8.3
+  - ws@8.20.1
+  - serialize-javascript@7.0.5
+  - uuid@11.1.1
+  - qs@6.15.2
+  - tmp@0.2.6
